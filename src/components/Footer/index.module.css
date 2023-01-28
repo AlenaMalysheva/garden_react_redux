@@ -1,0 +1,60 @@
+.footer {
+    height: 375px;
+    background-color: #E5E5E5;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 76px;
+}
+
+.phone {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 130%;
+    margin: 25px 0 32px;
+    cursor: pointer;
+}
+
+.social_icons {
+    width:100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.insta_icon ,
+.whatsApp_icon {
+   width: 44px;
+   height: 44px;
+   cursor: pointer;
+   color: black;
+}
+
+.address {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 130%;
+    margin-top: 25px;
+  
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    margin-top: 20px;
+}
+
+.accent {
+   display: block;
+   font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.accent_city {
+    display: block;
+    font-weight: 600;
+    font-size: 35px;
+}

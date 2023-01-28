@@ -6,15 +6,15 @@ import s from './index.module.css'
 
     export default function Header() {
         return (
-        <div className={s.container}>
-        <header className={['wrapper', s.header].join(' ')}>
+        <section className={s.container}>
+        <div className={['wrapper', s.header].join(' ')}>
             <div className={s.container_logo_btn}>
                 <img src={logo} alt="logo" />
                 <button>Catalog</button>
             </div>
             <Nav />
-        </header>
         </div>
+        </section>
     
     )
 }
