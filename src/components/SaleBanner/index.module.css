@@ -1,0 +1,80 @@
+.sale_container {
+    background-color: #A1E2EB;
+    height: 600px;
+   position: relative;
+ 
+}
+
+
+.sale_title {
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 130%;
+    color: white;
+
+}
+
+.sale_title .accent {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 130%;
+    display: block;
+}
+
+.sale_info {
+	padding: 130px 0 139px 0;
+    background-image: url('./img/banner_img.png');
+    background: no-repeat;
+    
+} 
+
+
+
+.sale_btn {
+    width: 241px;
+    height: 82px;
+    border-radius: 13px;
+    background-color: white;
+    margin-top: 60px;
+    padding: 25px 50px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%;
+    border: transparent;
+    cursor: pointer;
+}
+
+.sale_btn:hover {
+    color: white;
+    background-color: #A1E2EB ;
+    border: 2px solid white;
+    transition: all 0.7s; 
+}
+
+.details_btn {
+    width: 235px;
+    height: 82px;
+    border-radius: 13px;  
+    background-color: #A1E2EB; 
+    border: 2px solid white; 
+    padding: 25px 40px; 
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%; 
+    color: white;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.details_btn:hover {
+    color: black;
+    background-color: white ;
+    border: none;
+    transition: all 0.7s; 
+}
+
+.sale_img {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+} 
