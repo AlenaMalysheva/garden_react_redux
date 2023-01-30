@@ -1,0 +1,71 @@
+.discount_section {
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    height: 476px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 112px 0 0;
+}
+
+.discount_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.discount_form input{
+    width: 473px;
+    height: 75px;
+    border-radius: 25px;
+    padding: 27px 0 27px 50px;
+    margin-top: 46px;
+    border: none;
+    outline: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #6C6C6C;
+    opacity: 1;   /* Firefox  */
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+.discount_form button {
+    width: 473px;
+    height: 75px;
+    border-radius: 25px;
+    border: 2.4px solid  #FFFFFF;
+    padding: 20px 94px 20px 95px;
+    font-weight: 700;
+    font-size: 28.7392px;
+    line-height: 120%;
+    cursor: pointer;
+    margin-top: 39px;
+    
+}
+
+.discount_title {
+    color: #FFFFFF;
+    margin: 44px 52px 0 0;
+
+}
+
+.accent_discount {
+    display: block;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 100%;
+}
+
+.errors_message {
+   color: #e8aeae;
+   margin-left: 15px; 
+}
+
+/* img {
+    padding: 27px 180px 27px 61px;
+    
+} */

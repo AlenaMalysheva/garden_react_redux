@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './index.module.css'
-import img from './img/banner_img.png'
+import img from '../../media/banner_img.png'
 
 export default function SaleBanner() {
   return (
@@ -10,7 +10,7 @@ export default function SaleBanner() {
             <button className={s.sale_btn}>All sale</button>
             <button className={s.details_btn}>More</button>
         </div>
-        <img src={img} alt="" className={s.sale_img}/>
+        <img src={img} alt="img_discount" className={s.sale_img}/>
     </section>
   )
 }
