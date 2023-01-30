@@ -7,11 +7,11 @@ import s from './index.module.css'
 export default function Layout() {
   return (
     <div>
-        <Header />
-            <main className={s.outlet}>
-                <Outlet />
-            </main>
-        <Footer />
+      <Header />
+        <main className={s.outlet}>
+          <Outlet />
+        </main>
+      <Footer />
     </div>
   )
 }
