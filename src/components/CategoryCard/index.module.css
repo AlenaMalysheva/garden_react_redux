@@ -1,0 +1,19 @@
+.category_card {
+    cursor: pointer;
+}
+
+.category_img {
+    width: 320px;
+    height: 300px;
+    object-fit: cover;
+    gap: 32px;
+}
+
+.category_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
