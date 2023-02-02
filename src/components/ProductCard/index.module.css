@@ -1,0 +1,57 @@
+.product_img {
+    width: 300px;
+    height: 300px;
+}
+
+.price_block {
+    /* width:283px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.full_price {
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+}
+
+.sale_percent {
+    color: #FF32A1;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+}
+
+.discont_price {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%; 
+    letter-spacing: 0.03em;
+}
+
+.sale_product_card {
+    width: 318px; 
+    text-align: center;
+}
+
+.sale_product_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #3A3A3A;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+

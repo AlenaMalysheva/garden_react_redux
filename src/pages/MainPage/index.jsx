@@ -2,6 +2,7 @@ import React from 'react'
 import CategoriesContainer from '../../components/CategoriesContainer'
 import DiscountVaucher from '../../components/DiscountVaucher'
 import SaleBanner from '../../components/SaleBanner'
+import SaleProductsContainer from '../../components/SaleProductsContainer'  
 
 export default function MainPage() {
 
@@ -10,6 +11,7 @@ export default function MainPage() {
         <SaleBanner />
         <CategoriesContainer limit={4} />
         <DiscountVaucher />
+        <SaleProductsContainer />
     </div>
   )
 }

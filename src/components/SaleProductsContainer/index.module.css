@@ -1,0 +1,9 @@
+.products_container {
+    display: flex;
+    gap: 44px;
+    margin: 21px 0 150px;
+}
+
+.sale_title {
+    margin: 49px;
+}
