@@ -1,17 +1,14 @@
 .sale_container {
     background-color: #A1E2EB;
     height: 600px;
-   position: relative;
- 
+    position: relative;
 }
-
 
 .sale_title {
     font-weight: 700;
     font-size: 63px;
     line-height: 130%;
     color: white;
-
 }
 
 .sale_title .accent {
@@ -71,7 +68,9 @@
 }
 
 .sale_img {
+    width: 900px;
+    height: 550px;
     position: absolute;
     top: 30px;
-    right: 0px;
+    right: 70px;
 } 

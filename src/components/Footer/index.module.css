@@ -25,10 +25,10 @@
 
 .insta_icon ,
 .whatsApp_icon {
-   width: 44px;
-   height: 44px;
-   cursor: pointer;
-   color: black;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: black;
 }
 
 .address {
@@ -36,7 +36,7 @@
     font-size: 35px;
     line-height: 130%;
     margin-top: 25px;
-  
+    width: 564px;
 }
 
 .subtitle {
@@ -47,8 +47,8 @@
 }
 
 .accent {
-   display: block;
-   font-weight: 600;
+    display: block;
+    font-weight: 600;
     font-size: 24px;
     line-height: 130%;
 }

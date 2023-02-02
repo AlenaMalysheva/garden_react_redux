@@ -10,10 +10,10 @@ const {register, handleSubmit, formState: {errors}, reset } = useForm();
 
 const submit = (data) => {
     console.log(data);
-    reset();              //очистить инпут после отправки
+    reset();              // очистить инпут после отправки
 }
 
-//зарегистривала данные которые будут вводится
+// зарегистривать данные которые будут вводиться
 const numberRegister = register('number', {
     required: '*The field number is required',
     pattern: {
@@ -23,7 +23,7 @@ const numberRegister = register('number', {
 })
 
   return (
-        <section className={s.discount_section} id='discount'>
+    <section className={s.discount_section} id='discount'>
         <img src={discountImg} alt="img" />
         <div>
             <h2 className={s.discount_title}>

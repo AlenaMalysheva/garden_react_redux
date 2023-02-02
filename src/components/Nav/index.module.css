@@ -5,7 +5,7 @@
     padding-top: 44px;
 }
 
-.nav_menu a{
+.nav_menu a {
     font-weight: 600;
     font-size: 17px;
     line-height: 130%;
@@ -14,9 +14,8 @@
     color: black;
 }
 
-.nav_menu a:hover{
+.nav_menu a:hover {
     color: #339933;
-   
 }
 
 .cart_icon {

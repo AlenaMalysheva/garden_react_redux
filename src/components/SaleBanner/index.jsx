@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './index.module.css'
-import img from '../../media/banner_img.png'
+import img from '../../media/g.png'
 
 export default function SaleBanner() {
   return (

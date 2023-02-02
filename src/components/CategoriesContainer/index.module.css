@@ -8,14 +8,13 @@
 .categories_block {
     background-color: #E5E5E5;
     padding: 40px 0 112px;
-    height: 617px;
 }
 
 .categories_title {
     font-weight: 700;
     font-size: 40px;
     line-height: 130%;
-    margin-bottom: 26px;
+    margin-bottom: 40px;
 }
 
 .categories_info {
@@ -23,7 +22,7 @@
     padding: 20px;
 }
 
-.categories_btn  {
+.categories_btn {
     margin: 14px 0 0 26px;
     border: 2px solid #8B8B8B;
     width: 120px;

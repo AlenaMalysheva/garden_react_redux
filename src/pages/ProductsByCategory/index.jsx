@@ -1,7 +1,12 @@
 import React from 'react'
+import ProdsCategoryContainer from '../../components/ProdsCategoryContainer'
 
-export default function ProductsByCategory() {
+export default function ProductsByCategory({title}) {
+
+
   return (
-    <div>ProductsByCategory</div>
+    <div>
+      <ProdsCategoryContainer title={title}/>
+    </div>
   )
 }
