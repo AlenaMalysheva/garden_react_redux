@@ -7,6 +7,7 @@ export default function ProductCard({id, image, title, price, discont_price,cate
   const discount = Math.round(((price - discont_price) / price )* 100);
 
 return (
+
     <div className={s.sale_product_card}>
       <div>
         <img src={`http://127.0.0.1:3333${image}`} alt={title} className={s.product_img}/>
