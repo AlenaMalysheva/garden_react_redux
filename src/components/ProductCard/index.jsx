@@ -8,9 +8,10 @@ export default function ProductCard({id, image, title, price, discont_price,cate
 
 return (
     <div className={s.sale_product_card}>
-      <Link to={`/categories/${categoryId}/products/${id}`}>
+      <div className={s.a}>
         <img src={`http://127.0.0.1:3333${image}`} alt={title} className={s.product_img}/>
-      </Link>
+        <button>add to cart</button>
+      </div>
       <div className={s.price_block}>
         <p className={s.discont_price}>{discont_price}$</p>
         <p className={s.full_price}>{price}$</p>

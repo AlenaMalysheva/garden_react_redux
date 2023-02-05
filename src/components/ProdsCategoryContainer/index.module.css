@@ -1,0 +1,74 @@
+.products_container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 44px;
+  
+
+}
+
+.products_section {
+  /* под вопросом */
+  padding: 30px 40px 50px 0; 
+}
+
+
+.sorting {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin: 81px 0 45px ;
+}
+
+.search_form {
+  display: inline;
+}
+
+  .form_title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+} 
+
+ .search_form input {
+  width: 103px;
+  height: 42px ;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #E5E5E5;
+}
+
+.sort_select { 
+  width: 219px;
+  height: 40px ;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  margin-left: 42px;
+  padding: 10px;
+  background-color: #E5E5E5;
+  color: #797979;
+  font-size: 16px; 
+   font-weight: 500px;
+}
+
+::placeholder {
+  font-size: 16px;
+  font-weight: 500px;
+  color: #ACACAC;
+}
+
+.search_form button {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px;
+  width: 103px;
+  height: 42px ;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search_form button:hover {
+  color: white;
+  background-color: #339933;
+}

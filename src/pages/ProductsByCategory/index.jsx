@@ -1,12 +1,11 @@
 import React from 'react'
 import ProdsCategoryContainer from '../../components/ProdsCategoryContainer'
 
-export default function ProductsByCategory({title}) {
-
+export default function ProductsByCategory() {
 
   return (
     <div>
-      <ProdsCategoryContainer title={title}/>
+      <ProdsCategoryContainer />
     </div>
   )
 }

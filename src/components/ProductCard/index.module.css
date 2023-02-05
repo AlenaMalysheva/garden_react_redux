@@ -4,7 +4,6 @@
 }
 
 .price_block {
-    /* width:283px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +50,30 @@
     text-decoration: none;
 }
 
+.sale_product_card div {
+    position: relative;
+} 
 
+.sale_product_card button{ 
+    width: 279px;
+    height: 72px;
+    border: 2px solid#339933;
+    background-color: #F1FFF1;
+    border-radius: 21px;
+    color:#339933;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 25px 86px 24px 86px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 32px;
+    right: 20px;
+    opacity: 0;
+}
 
+.sale_product_card:hover button {
+    opacity: 0.9;
+    transition: 2s;
+} 
 
 
