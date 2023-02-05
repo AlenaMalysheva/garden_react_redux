@@ -8,7 +8,7 @@ export default function ProductCard({id, image, title, price, discont_price,cate
 
 return (
     <div className={s.sale_product_card}>
-      <div className={s.a}>
+      <div>
         <img src={`http://127.0.0.1:3333${image}`} alt={title} className={s.product_img}/>
         <button>add to cart</button>
       </div>

@@ -35,7 +35,7 @@
 }
 
 .sale_product_card {
-    width: 318px; 
+    width: 310px; 
     text-align: center;
 }
 
@@ -67,7 +67,7 @@
     cursor: pointer;
     position: absolute;
     bottom: 32px;
-    right: 20px;
+    right: 16px;
     opacity: 0;
 }
 

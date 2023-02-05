@@ -2,15 +2,12 @@
   display: grid;
   grid-template-columns: repeat(4, 25%);
   gap: 44px;
-  
-
 }
 
 .products_section {
   /* под вопросом */
   padding: 30px 40px 50px 0; 
 }
-
 
 .sorting {
   display: flex;

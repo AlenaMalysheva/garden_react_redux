@@ -1,0 +1,13 @@
+.products_section {
+    background-color: #E5E5E5;
+}
+
+.products_container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 44px;
+}
+
+.products_title {
+    margin-bottom: 30px;
+}
