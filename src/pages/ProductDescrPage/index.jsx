@@ -21,9 +21,10 @@ useEffect(() => {
   return (
     <div className={s.product_page}>
         {
-            product.map(product => <ProductDescrCard {...product} key={product.id}/>)
-        }
-     
+          Array.isArray(product) && product.length > 0
+          ? product.map(product => <ProductDescrCard {...product} key={product.id}/>)
+          : null
+        } 
     </div>
   )
 }

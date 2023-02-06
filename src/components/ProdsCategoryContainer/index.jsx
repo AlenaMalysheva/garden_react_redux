@@ -4,6 +4,7 @@ import { getProductsByCategory } from '../../requests/products_by_category_req';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../ProductCard';
 import s from './index.module.css'
+import { sortProducts } from '../../store/reducers/productsByCategoryReducer';
 
 export default function ProdsCategoryContainer() {
 
@@ -20,6 +21,11 @@ export default function ProdsCategoryContainer() {
 
     // const categories = useSelector(state => state.categories)
 
+    const onInput = ( event ) => {
+        dispatch(sortProducts(event.target.value))
+    } 
+    
+   
   return (
     <section className={s.products_section}>
         <div className='wrapper'>
@@ -36,7 +42,7 @@ export default function ProdsCategoryContainer() {
 
                 <div>
                     <span className={s.form_title}>Sorted </span>
-                        <select className={s.sort_select}>
+                        <select className={s.sort_select} onInput={onInput}>
                             <option value='default'>by default</option>
                             <option value='title'>by title</option>
                             <option value='price'> by price</option>
@@ -53,4 +59,5 @@ export default function ProdsCategoryContainer() {
     </section>
   )
 }
+
 
