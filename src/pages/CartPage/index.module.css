@@ -1,0 +1,148 @@
+.cart_page {
+    min-height: 700px;
+    background-color: #E5E5E5;
+}
+
+.cart_nav {
+    width: 824px;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 35px;
+}
+
+.cart_container {
+    border-top: 1px solid #A7A7A7;
+}
+
+.cart_nav > p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart_nav_btn {
+    display: flex;
+    gap: 21px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn_back {
+    font-size: 10px;
+    font-weight: 300;
+    color: #A7A7A7;
+    margin-top: 9px;
+}
+
+.cart_content {
+    display: flex;
+    gap: 60px;
+}
+
+.cart {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.cart_empty {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    margin: 107px;
+}
+
+.cart_icon {
+    font-size: 300px;
+    font-weight: 100;
+    color: #339933;
+}
+
+.cart_empty p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form_block {
+    border: 2px solid black;
+    width: 496px;
+    height: 493px;
+    border-radius: 21px;
+    padding: 25px;
+}
+
+.cart_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_form input {
+    width: 446px;
+    height: 73px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #929292;
+}
+
+.submit_btn {
+    background-color:#339933;
+    width: 446px;
+    height: 76px;
+    border-radius: 17px;
+    border: none;
+    padding: 20px, 185px, 20px, 143px;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.clear_btn {
+    background-color:white;
+    width: 446px;
+    height: 76px;
+    border-radius: 17px;
+    border: none;
+    padding: 20px, 185px, 20px, 143px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #339933;
+    margin: 0 auto;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.form_title {
+    margin-bottom: 42px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.total_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 49px;
+}
+
+.total_title {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.total_price {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+
+

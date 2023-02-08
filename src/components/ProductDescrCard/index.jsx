@@ -1,10 +1,9 @@
 import React from 'react'
 import s from './index.module.css'
 
-export default function ProductDescrCard({ title, price, discont_price, description, image }) {
+export default function ProductDescrCard({title, price, discont_price, description, image,count }) {
 
-
-  const discont = Math.round(((price - discont_price) / price )* 100)
+    const discont = Math.round(((price - discont_price) / price )* 100)
 
   return (
     <div className={s.product_descr_card}>
