@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
     categories : categoriesReducer,
     allProducts: allProductsReducer,
     prodsByCategory: productsByCategoryReducer,
-    product: productReducer
+    product: productReducer,
 });
 
 export const store = createStore(rootReducer,applyMiddleware(thunk))
