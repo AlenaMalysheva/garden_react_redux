@@ -3,11 +3,19 @@ import { GiShoppingCart } from "react-icons/gi"
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { useSelector } from 'react-redux'
 
 export default function Nav() {
+
+  const cart = useSelector(state => state.cart);
+
+  const cart_count = cart.reduce((total,item) => total + item.count, 0 )
+
   return (
     <div className={s.nav_menu}>
-        <Link to='categories'>Categories</Link>
+        <Link to='categories'>
+          <p>Categories</p>
+        </Link>
         <AnchorLink href='#coupon'>
           <p>Coupon</p>
         </AnchorLink>
@@ -18,7 +26,12 @@ export default function Nav() {
           <p>Contact</p>
         </AnchorLink>
         <Link to='cart'>
-          <GiShoppingCart className={s.cart_icon}/>
+          <div className={s.cart_nav}>
+            <GiShoppingCart className={s.cart_icon}/>
+            {
+              cart.length !== 0 ? <p>{cart_count}</p> : ''
+            }
+          </div>
         </Link>
     </div>
   )

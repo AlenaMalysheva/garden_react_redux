@@ -5,10 +5,18 @@ import {GiShoppingCart} from 'react-icons/gi'
 import s from './index.module.css'
 import {RightOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { clearCart } from '../../store/reducers/cartReducer'
 
 export default function CartPage() {
 
   const cart = useSelector(state => state.cart);
+
+  const total = cart.reduce((total,el) => total + el.discont_price * el.count, 0)
+
+  const dispatch = useDispatch();
+
+  const clear_cart = () => dispatch(clearCart)
 
   return (
     <section className={s.cart_page}>
@@ -42,12 +50,12 @@ export default function CartPage() {
               <p className={s.form_title}>Order details</p>
               <div className={s.total_block}>
                 <p className={s.total_title}>Total</p>
-                <p className={s.total_price}>1234$</p>
+                <p className={s.total_price}>{total}$</p>
               </div>
               <form className={s.cart_form}>
                 <input type="number" placeholder='phone number' name='number'/>
                 <button className={s.submit_btn}>Order</button>
-                <button className={s.clear_btn}>Clear cart</button>             
+                <button className={s.clear_btn} onClick={clear_cart}>Clear cart</button>             
               </form>
             </div>
           </div>
