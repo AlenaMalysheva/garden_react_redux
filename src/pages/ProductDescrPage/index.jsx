@@ -18,13 +18,11 @@ useEffect(() => {
   dispatch(getProduct(id))
 }, [])
 
+console.log('rrrrrrr',product)
+
   return (
     <div className={s.product_page}>
-        {
-          Array.isArray(product) && product.length > 0
-          ? product.map(product => <ProductDescrCard {...product} key={product.id}/>)
-          : null
-        } 
-    </div>
+      <ProductDescrCard {...product} key={product.id}/>
+    </div>    
   )
 }

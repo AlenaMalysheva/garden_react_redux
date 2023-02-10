@@ -14,7 +14,7 @@
     color: black;
 }
 
-p:hover {
+.nav_menu p:hover {
     color: #339933;
 }
 
