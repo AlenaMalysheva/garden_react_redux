@@ -1,11 +1,10 @@
 import React from 'react'
 import CartItem from '../../components/CartItem'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 import {GiShoppingCart} from 'react-icons/gi'
 import s from './index.module.css'
 import {RightOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 import { clearCart } from '../../store/reducers/cartReducer'
 
 export default function CartPage() {
@@ -16,9 +15,10 @@ export default function CartPage() {
 
   const dispatch = useDispatch();
 
-  const clear_cart = () => dispatch(clearCart)
-
+  const clear_cart = () => dispatch(clearCart())
+    
   return (
+  
     <section className={s.cart_page}>
       <div className='wrapper'>
         <div>
@@ -62,6 +62,4 @@ export default function CartPage() {
         }
       </div>
     </section>
-   
-)}
-      
+  )}   
