@@ -7,6 +7,7 @@ import { productReducer } from './reducers/productReducer';
 import { cartReducer } from './reducers/cartReducer';
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import { wishListReducer } from './reducers/wishListReducer';
 
 
 const rootReducer = combineReducers({
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     allProducts: allProductsReducer,
     prodsByCategory: productsByCategoryReducer,
     product: productReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    wishList: wishListReducer
 });
 
 
@@ -22,11 +24,9 @@ const persistConfig = {
     key: 'root',
     storage,
     whitelist: ['cart'],
- 
 }
 
 const persistedReducer = persistReducer( persistConfig, rootReducer );
-
 
 export const store = createStore(persistedReducer,applyMiddleware(thunk));
 

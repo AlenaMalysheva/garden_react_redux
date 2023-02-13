@@ -12,7 +12,7 @@ export default function Nav() {
   const cart_count = cart.reduce((total,item) => total + item.count, 0 )
 
   return (
-    <div className={s.nav_menu}>
+    <nav className={s.nav_menu}>
         <Link to='categories'>
           <p>Categories</p>
         </Link>
@@ -25,15 +25,15 @@ export default function Nav() {
         <AnchorLink  href='#contacts'>
           <p>Contact</p>
         </AnchorLink>
-        <Link to='cart'>
-          <div className={s.cart_nav}>
-            <GiShoppingCart className={s.cart_icon}/>
-            {
-              cart.length !== 0 ? <p>{cart_count}</p> : ''
-            }
-          </div>
-        </Link>
-    </div>
+          <Link to='cart'>
+            <div className={s.cart_nav}>
+              <GiShoppingCart className={s.cart_icon}/>
+              {
+                cart.length !== 0 ? <p>{cart_count}</p> : ''
+              }
+            </div>
+          </Link>
+    </nav>
   )
 }
 

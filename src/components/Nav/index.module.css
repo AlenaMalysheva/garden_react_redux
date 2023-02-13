@@ -40,7 +40,8 @@
     opacity: 1;
 }
 
-.cart_nav:hover p{
+.cart_nav:hover p{ 
     opacity: 0;
-    color: black;
+    color: black; 
 }
+
