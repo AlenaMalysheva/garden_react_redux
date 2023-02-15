@@ -7,13 +7,13 @@ import { useSelector } from 'react-redux'
 
 export default function Nav() {
 
-  const cart = useSelector(state => state.cart);
+  const cart = useSelector(state => state.cart); 
 
-  const cart_count = cart.reduce((total,item) => total + item.count, 0 )
+  const cart_count = cart.reduce((total,item) => total + item.count, 0 ) 
 
   return (
-    <nav className={s.nav_menu}>
-        <Link to='categories'>
+    <nav className={s.nav_menu}> 
+        <Link to='categories'>  
           <p>Categories</p>
         </Link>
         <AnchorLink href='#coupon'>
@@ -29,7 +29,7 @@ export default function Nav() {
             <div className={s.cart_nav}>
               <GiShoppingCart className={s.cart_icon}/>
               {
-                cart.length !== 0 ? <p>{cart_count}</p> : ''
+                cart.length !== 0 ? <p>{cart_count}</p> : ''  
               }
             </div>
           </Link>

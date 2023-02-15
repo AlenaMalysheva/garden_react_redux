@@ -23,7 +23,7 @@
     background: no-repeat;
 } 
 
-.sale_btn {
+.sale_btn, .details_btn {
     width: 241px;
     height: 82px;
     border-radius: 13px;
@@ -36,6 +36,7 @@
     cursor: pointer;
     color: white;
     border: 2px solid white;
+    margin-right: 40px;
 }
 
 .sale_btn:hover {
@@ -43,21 +44,6 @@
     background-color: white ;
     border: none;
     transition:  0.7s; 
-}
-
-.details_btn {
-    width: 235px;
-    height: 82px;
-    border-radius: 13px;  
-    background-color: #A1E2EB; 
-    border: 2px solid white; 
-    padding: 25px 40px; 
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 130%; 
-    color: white;
-    margin-left: 40px;
-    cursor: pointer;
 }
 
 .details_btn:hover {

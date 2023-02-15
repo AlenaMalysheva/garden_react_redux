@@ -1,15 +1,17 @@
 .discount_section {
-    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
     height: 476px;
     display: flex;
-    justify-content: space-between;
-    padding: 0 112px 0 0;
+    justify-content: space-between; 
+    padding: 27px 200px 27px 91px;
+} 
+
+.wrapper {
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
 }
 
 .discount_form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .discount_form input {
@@ -18,11 +20,8 @@
     border-radius: 25px;
     padding: 27px 0 27px 50px;
     margin-top: 46px;
-    border: none;
+    border: none; 
     outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 ::placeholder { 
@@ -33,7 +32,7 @@
     line-height: 120%;
   }
 
-.discount_form button {
+.discount_btn {
     width: 473px;
     height: 75px;
     border-radius: 25px;
@@ -43,8 +42,10 @@
     font-size: 28.7392px;
     line-height: 120%;
     cursor: pointer;
-    margin-top: 39px;
-}
+    margin-top: 30px;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    color: white;
+}   
 
 .discount_title {
     color: #FFFFFF;

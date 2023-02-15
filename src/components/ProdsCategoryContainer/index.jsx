@@ -14,6 +14,8 @@ export default function ProdsCategoryContainer() {
 
     const prodsBycategory = useSelector(state => state.prodsByCategory)
 
+    const currentCategory = useSelector(state => state.categories.find(el => el.id == category));
+
     useEffect(() => {
         dispatch(getProductsByCategory(category))
     }, [])
@@ -28,13 +30,12 @@ export default function ProdsCategoryContainer() {
         const min_value = min.value || 0;
         const max_value = max.value || Infinity;
         dispatch(searchProducts({ min_value, max_value }));
-    
     }
 
     return (
     <section className={s.products_section}>
         <div className='wrapper'>
-            <p>...</p>
+        <h2>{currentCategory.title}</h2>
             <div className={s.sorting}>
                 <div>
                     <span className={s.form_title}>Price </span>
