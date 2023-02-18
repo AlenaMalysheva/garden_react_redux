@@ -1,23 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductsByCategory } from '../../requests/products_by_category_req';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../ProductCard';
 import s from './index.module.css'
-import { sortProducts, searchProducts } from '../../store/reducers/productsByCategoryReducer';
+import { sortProducts, searchProducts , productsOnSale } from '../../store/reducers/productsByCategoryReducer';
+import { getCategory } from '../../requests/category'
 
 export default function ProdsCategoryContainer() {
 
     const  dispatch = useDispatch();
 
-    const { category } = useParams();
+    const { categoryId } = useParams();
 
     const prodsBycategory = useSelector(state => state.prodsByCategory)
 
-    const currentCategory = useSelector(state => state.categories.find(el => el.id == category));
+    const category = useSelector( state => state.category)
 
     useEffect(() => {
-        dispatch(getProductsByCategory(category))
+        dispatch(getCategory(categoryId))
+        dispatch(getProductsByCategory(categoryId))
     }, [])
 
     const sort_product = ( event ) => {
@@ -32,10 +34,16 @@ export default function ProdsCategoryContainer() {
         dispatch(searchProducts({ min_value, max_value }));
     }
 
+    const [onSale, setOnSale] = useState(false);
+
+    useEffect(() => {
+        dispatch(productsOnSale(onSale))
+    } , [ onSale ])
+
     return (
     <section className={s.products_section}>
         <div className='wrapper'>
-        <h2>{currentCategory.title}</h2>
+        <h2>{category.title}</h2>
             <div className={s.sorting}>
                 <div>
                     <span className={s.form_title}>Price </span>
@@ -46,6 +54,10 @@ export default function ProdsCategoryContainer() {
                     </form>
                 </div>
 
+                    <label htmlFor="discountCheckbox" className={s.label_discount}>Discounted items</label>
+                    <input type="checkbox" id="discountCheckbox" checked={onSale} onChange={() => setOnSale(!onSale)}
+                    />
+            
                 <div>
                     <span className={s.form_title}>Sorted </span>
                         <select className={s.sort_select} onInput={sort_product}>
@@ -57,15 +69,16 @@ export default function ProdsCategoryContainer() {
             </div>
             
             <div className={s.products_container}>
-                {
-                    prodsBycategory
-                    .filter(el => !el.hide_elem)
-                    .map(el => <ProductCard key={el.id} {...el} />)
-                }
+
+            {
+            prodsBycategory
+                    .filter((el) => !el.hide_elem)
+                    .map((el) => (
+                    <ProductCard key={el.id} {...el} />
+            ))}
+                
             </div>
         </div>
     </section>
   )
 }
-
-

@@ -1,8 +1,14 @@
 .categories_container {
-    display: grid;
-    grid-template-columns: repeat( 4, 1fr);
+    /* display: flex;
     gap: 32px;
-    
+    flex-wrap: wrap; */
+      display: grid;
+  
+    grid-template-columns: repeat( 4, 1fr);
+   
+    gap: 32px;  
+    max-width:1440px;
+
 }
 
 .categories_block {
@@ -23,11 +29,19 @@
 }
 
 .categories_btn {
-    margin: 14px 0 0 26px;
+    margin: 14px 0 0 96px;
     border: 2px solid #8B8B8B;
     width: 120px;
     height: 31px;
     padding: 7px 11px;
     color: #8B8B8B;
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) { 
+    .categories_container { 
+        grid-template-columns: 320px;
+        justify-content: center; 
+        align-items: center; 
+    }
 }

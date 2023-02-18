@@ -22,3 +22,9 @@ h2 {
   line-height: 130%;
   color: #000000;
 }
+
+@media screen and (max-width: 480px) {
+  h2 { 
+    font-size: 25px;
+  }
+}

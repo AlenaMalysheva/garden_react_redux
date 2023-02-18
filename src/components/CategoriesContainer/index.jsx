@@ -5,7 +5,7 @@ import CategoryCard from '../CategoryCard'
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
 
-export default function CategoriesContainer({limit}) {
+export default function CategoriesContainer({limit,showButton = true}) {
 
     const dispatch = useDispatch();
 
@@ -23,9 +23,14 @@ export default function CategoriesContainer({limit}) {
             <div className='wrapper'>
                 <div className={s.categories_info}>
                     <p className={s.categories_title}>Categories</p>
-                    <Link to='/categories'>
-                        <button className={s.categories_btn}>All categories</button>
-                    </Link>
+                    {
+                        showButton && (
+                            <Link to='/categories'>
+                            <button className={s.categories_btn}>All categories</button>
+                        </Link>
+                        )
+                    }
+                    
                 </div>
                 <div className={s.categories_container}>
                     {

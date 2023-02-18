@@ -11,7 +11,7 @@
 
 .sorting {
   display: flex;
-  gap: 100px;
+  /* gap: 100px; */
   align-items: center;
   margin: 81px 0 45px ;
 }
@@ -69,3 +69,34 @@
   color: white;
   background-color: #339933;
 }
+
+.label_discount {
+  font-size: 20px;
+  font-weight: 600;
+  width: 191;
+  margin: 0 40px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;   /* убираем стандартную стилизацию*/
+  border: 1px solid #000000;
+  border-radius: 7px;
+  background-color: #E5E5E5;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 91px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '\2713';
+  font-size: 38px;
+  color: #339933;
+  position: absolute;
+  top: -8px;
+  left: 4px;
+}
+

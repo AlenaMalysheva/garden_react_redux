@@ -19,7 +19,7 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-            <div>
+            <div className={s.address_block}>
                 <h2>Adress</h2>
                 <p className={ s.address }>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</p>
                 <p className={ s.subtitle }>Working Hours:

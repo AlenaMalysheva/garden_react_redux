@@ -11,3 +11,12 @@
 .products_title {
     margin-bottom: 30px;
 }
+
+
+@media screen and (max-width: 480px) {
+    .products_container {
+        grid-template-columns: 320px;
+        justify-content: center; 
+        align-items: center; 
+    }
+}

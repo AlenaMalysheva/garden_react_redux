@@ -11,7 +11,6 @@ export default function SaleBanner() {
             <Button className={s.sale_btn}>Sale</Button> 
             <Button className={s.details_btn}>More</Button> 
         </div>
-        <img src={img} alt="img_discount" className={s.sale_img}/>  
     </section>
   )
 }

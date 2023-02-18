@@ -7,16 +7,19 @@ import { productReducer } from './reducers/productReducer';
 import { cartReducer } from './reducers/cartReducer';
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import { wishListReducer } from './reducers/wishListReducer';
+import { categoryReducer } from './reducers/categoryReducer';
+// import { wishListReducer } from './reducers/wishListReducer';
 
 
 const rootReducer = combineReducers({
     categories : categoriesReducer,
+    category : categoryReducer,
     allProducts: allProductsReducer,
     prodsByCategory: productsByCategoryReducer,
     product: productReducer,
-    cart: cartReducer,
-    wishList: wishListReducer
+    cart: cartReducer
+    
+    // wishList: wishListReducer
 });
 
 
