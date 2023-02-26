@@ -56,7 +56,7 @@ export default function ProdsCategoryContainer() {
         return () => clearTimeout(timeoutId);
       }, [ minPrice, maxPrice ]);
 
-    // фильтрация по наличию цены
+    // фильтрация по наличию цены со скидкой
 
     const [onSale, setOnSale] = useState(false);
 

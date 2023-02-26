@@ -3,7 +3,6 @@ import Nav from '../Nav'
 import logo from '../../media/logo.png'
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
-import Button from '../Button'
 
     export default function Header() {
         return (

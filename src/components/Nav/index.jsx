@@ -1,9 +1,13 @@
-import React from 'react'
+import React , { useState } from 'react'
 import { GiShoppingCart } from "react-icons/gi"
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useSelector } from 'react-redux'
+import { RiMenuAddFill  } from 'react-icons/ri'
+import { GrFavorite } from 'react-icons/gr'
+import { AiOutlineClose } from 'react-icons/ai'
+import Footer from '../Footer'
 
 export default function Nav() {
 
@@ -11,28 +15,48 @@ export default function Nav() {
 
   const cart_count = cart.reduce((total,item) => total + item.count, 0 ) 
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMunuClick = () => {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
-    <nav className={s.nav_menu}> 
-        <Link to='categories'>  
-          <p>Categories</p>
-        </Link>
-        <AnchorLink href='#coupon'>
-          <p>Coupon</p>
-        </AnchorLink>
-        <AnchorLink href='#discount'>
-          <p>Discount</p>
-        </AnchorLink>
-        <AnchorLink  href='#contacts'>
-          <p>Contact</p>
-        </AnchorLink>
-          <Link to='cart'>
-            <div className={s.cart_nav}>
-              <GiShoppingCart className={s.cart_icon}/>
-              {
-                cart.length !== 0 ? <p>{cart_count}</p> : ''  
-              }
-            </div>
+    <nav className={ s.nav_menu_container}>
+        <ul className={ menuOpen ? [s.nav_menu, s.active].join(' ') : [s.nav_menu]}>
+          <Link to='categories'>  
+            <li>Categories</li>
           </Link>
+          <AnchorLink href='#coupon'>
+            <li>Coupon</li>
+          </AnchorLink>
+          <AnchorLink href='#discount'>
+            <li>Discount</li>
+          </AnchorLink>
+          <AnchorLink  href='#contacts'>
+            <li>Contact</li>
+          </AnchorLink>
+          {
+            menuOpen && <Footer showAddressBlock={false} />
+          }
+         
+        </ul>
+        
+        
+        <div className={s.nav_menu_icons}>
+          <GrFavorite/>
+          <Link to='cart'>
+              <div className={s.cart_nav}>
+                <GiShoppingCart className={s.cart_icon}/>
+                {
+                  cart.length !== 0 ? <p>{cart_count}</p> : ''  
+                }
+              </div>
+          </Link>
+          <div className={s.burger_icon} onClick={handleMunuClick}>
+            { menuOpen ? <AiOutlineClose/> : <RiMenuAddFill /> }
+          </div>
+        </div>
     </nav>
   )
 }

@@ -18,7 +18,7 @@ useEffect(() => {
   dispatch(getProduct(id))
 }, [])
 
-console.log('rrrrrrr',product)
+
 
   return (
     <div className={s.product_page}>

@@ -3,7 +3,7 @@ import s from './index.module.css'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { BsWhatsapp } from 'react-icons/bs'
 
-export default function Footer() {
+export default function Footer({showAddressBlock = true}) {
     return (
     <footer className={ s.footer } id='contacts'>
         <div className={['wrapper', s.footer_container].join(' ')}>
@@ -19,13 +19,18 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-            <div className={s.address_block}>
-                <h2>Adress</h2>
-                <p className={ s.address }>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</p>
-                <p className={ s.subtitle }>Working Hours:
-                    <span className={ s.accent }>24 hours a day</span>
-                </p>
-            </div>
+            {
+                showAddressBlock && (
+                    <div className={s.address_block}>
+                        <h2>Adress</h2>
+                        <p className={ s.address }>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</p>
+                        <p className={ s.subtitle }>Working Hours:
+                            <span className={ s.accent }>24 hours a day</span>
+                        </p>
+                    </div>
+                )
+            }
+            
         </div>
     </footer>
   )
