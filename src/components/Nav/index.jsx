@@ -2,7 +2,8 @@ import React , { useState } from 'react'
 import { GiShoppingCart } from "react-icons/gi"
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+// import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { HashLink } from 'react-router-hash-link'
 import { useSelector } from 'react-redux'
 import { RiMenuAddFill  } from 'react-icons/ri'
 import { GrFavorite } from 'react-icons/gr'
@@ -27,15 +28,24 @@ export default function Nav() {
           <Link to='categories'>  
             <li>Categories</li>
           </Link>
-          <AnchorLink href='#coupon'>
+          <HashLink 
+            smooth to = '/#coupon'
+            onClick= {() => setMenuOpen(false)}
+          >
             <li>Coupon</li>
-          </AnchorLink>
-          <AnchorLink href='#discount'>
+          </HashLink>
+          <HashLink 
+            smooth to = '/#discount'
+            onClick= {() => setMenuOpen(false)}
+          >
             <li>Discount</li>
-          </AnchorLink>
-          <AnchorLink  href='#contacts'>
+          </HashLink>
+          <HashLink  
+            smooth to = '/#contacts'
+            onClick={() => setMenuOpen(false)}
+          >
             <li>Contact</li>
-          </AnchorLink>
+          </HashLink>
           {
             menuOpen && <Footer showAddressBlock={false} />
           }
