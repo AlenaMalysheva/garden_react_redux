@@ -30,7 +30,6 @@ export default function Footer({showAddressBlock = true}) {
                     </div>
                 )
             }
-            
         </div>
     </footer>
   )

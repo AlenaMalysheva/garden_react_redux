@@ -9,44 +9,6 @@
     background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
 }
 
-.discount_form {
-    display: flex;
-    flex-direction: column;
-}
-
-.discount_form input {
-    width: 473px;
-    height: 75px;
-    border-radius: 25px;
-    padding: 27px 0 27px 50px;
-    margin-top: 46px;
-    border: none; 
-    outline: none;
-}
-
-::placeholder { 
-    color: #6C6C6C;
-    opacity: 1;   
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 120%;
-  }
-
-.discount_btn {
-    width: 473px;
-    height: 75px;
-    border-radius: 25px;
-    border: 2.4px solid  #FFFFFF;
-    padding: 20px 94px 20px 95px;
-    font-weight: 700;
-    font-size: 28.7392px;
-    line-height: 120%;
-    cursor: pointer;
-    margin-top: 30px;
-    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
-    color: white;
-}   
-
 .discount_title {
     color: #FFFFFF;
     margin: 44px 52px 0 0;
@@ -59,25 +21,39 @@
     line-height: 100%;
 }
 
+.form_input {
+    width: 473px;
+    height: 75px;
+    border-radius: 25px;
+    padding: 27px 0 27px 15px;
+    margin-top: 46px;
+    border: none; 
+    outline: none;
+}
+
+.form_btn {
+    width: 473px;
+    height: 75px;
+    border-radius: 25px;
+    border: 2.4px solid  #FFFFFF;
+    padding: 20px 94px 20px 95px;
+    font-weight: 700;
+    font-size: 28.7392px;
+    line-height: 120%;
+    cursor: pointer;
+    margin-top: 30px;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    color: white;
+}
+
 .errors_message {
-   color: #e8aeae;
-   margin-left: 15px; 
+    color: #e8aeae;
+    margin-left: 15px; 
 }
 
 @media screen and (max-width: 480px) {
     .discount_section img {
         display: none;
-    }
-
-    .discount_form input {
-       width: 293px;
-       height: 58px; 
-    }
-
-    .discount_btn { 
-        width: 293px;
-       height: 58px; 
-       font-size: 16px;;
     }
 
     .accent_discount {
@@ -92,5 +68,16 @@
         margin: 0 auto;
         padding-bottom: 17px ;
     }
+    .form_input {
+        width: 293px;
+        height: 58px; 
+        padding: 27px 0 27px 15px;
+    }
+    .form_btn { 
+        width: 293px;
+        height: 58px; 
+        font-size: 16px;;
+    }
 }
+
 

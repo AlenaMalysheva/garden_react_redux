@@ -1,5 +1,5 @@
 .cart_page {
-    min-height: 700px;
+    min-height: 390px;
     background-color: #E5E5E5;
 }
 
@@ -69,17 +69,12 @@
 .form_block {
     border: 2px solid black;
     width: 496px;
-    height: 493px;
+    height: 520px;
     border-radius: 21px;
     padding: 25px;
 }
 
-.cart_form {
-    display: flex;
-    flex-direction: column;
-}
-
-.cart_form input {
+.cart_form_input {
     width: 446px;
     height: 73px;
     border-radius: 20px;
@@ -89,9 +84,15 @@
     font-weight: 500;
     font-size: 18px;
     color: #929292;
+    outline: none;
 }
 
-.submit_btn {
+.errors_message {
+    color: #e84e4e;
+    margin-left: 15px; 
+}
+
+.cart_form_btn {
     background-color:#339933;
     width: 446px;
     height: 76px;
@@ -144,5 +145,24 @@
     font-size: 32px;
 }
 
+.success_message {
+    border: 2px solid #339933;
+    border-radius: 15px;
+    padding: 100px 0;
+    width: 875px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 5px 5px rgba(34, 60, 80, 0.2);
+}
 
 
+.success_message > p {
+    margin: 20px 0 30px;
+}
+
+.success_message button {
+    background-color:#F1FFF1;
+    border: 1px solid #339933;
+    border-radius: 15px;
+    padding: 20px 40px;
+}
