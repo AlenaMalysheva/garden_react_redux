@@ -1,9 +1,8 @@
 .sale_container {
     background-color: #A1E2EB;
     max-height: 600px;
-    /* position: relative; */
     background-image: url(../../media/banner_img.png);
-    background-size: 50%;
+    background-size: 650px;
 	background-repeat: no-repeat;
 	background-position: right;
 }
@@ -65,6 +64,23 @@
     right: 70px;
 } 
 
+@media screen and (max-width: 1100px) {
+    .sale_container { 
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sale_title {
+        font-size: 47px;
+    }
+
+    .sale_btn, .details_btn {
+        width: 178px;
+        height: 60px;
+        padding: 11px 34px;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .sale_container { 
@@ -87,19 +103,4 @@
 }
 
 
-/* 
-@media  screen and ( max-width: 1200px) {
-     .sale_container {
-        background-si: none;
 
-    } 
-    .sale_info {
-        padding: 130px 0 139px 0;
-        background : no-repeat;
-
-
-    }
-    .sale_title {
-        font-size: 40px;
-    }
-} */

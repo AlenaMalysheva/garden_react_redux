@@ -13,21 +13,26 @@ export default function ProductDescrCard({ title, price, discont_price, descript
 
     const add_to_cart = () => dispatch(addToCart({id: +id, image, title, price, discont_price}))
 
-
   return (
     <div className={s.product_descr_card}>
         <div className='wrapper'>
             <h2>{title}</h2>
             <div className={s.product_card_content}>
-                <div>
-                    <img src={`http://127.0.0.1:3333${image}`} alt={title} />
+                <div className={s.card_img}>
+                    <img src={`https://garden-project-backend.onrender.com${image}`} alt={title} />
                 </div>
                 <div className={s.product_card_info}>
-                    <div className={s.price_block}>
-                        <p className={s.discont_price}>{discont_price}$</p>
-                        <p className={s.full_price}>{price}$</p>
-                        <p className={s.discount_percentage}>{discont}%</p>
-                    </div>
+                    {
+                        discont_price < price 
+                        ?   <div className={s.price_block}>
+                                <p className={s.discont_price}>{discont_price}$</p>
+                                <p className={s.price}>{price}$</p>
+                                <p className={s.discount_percentage}>{discont}%</p>
+                            </div>
+                        :   <div className={s.price_block}>
+                                <p className={s.full_price}>{price}$</p>
+                            </div>
+                    }
                     <button className={s.product_card_btn} onClick={add_to_cart}>to cart</button>
                     <p className={s.description}>
                         <span>Description</span>

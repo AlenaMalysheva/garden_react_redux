@@ -1,17 +1,16 @@
 .products_container {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
   gap: 44px;
 }
 
 .products_section {
-  /* под вопросом */
-  padding: 30px 40px 50px 0; 
+  background-color: #E5E5E5
 }
 
 .sorting {
   display: flex;
-  /* gap: 100px; */
   align-items: center;
   margin: 81px 0 45px ;
 }
@@ -46,7 +45,7 @@
   background-color: #E5E5E5;
   color: #797979;
   font-size: 16px; 
-   font-weight: 500px;
+  font-weight: 500px;
 }
 
 ::placeholder {
@@ -100,3 +99,78 @@ input[type="checkbox"]:checked::before {
   left: 4px;
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .products_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sorting {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .products_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  input[type="checkbox"] {
+    width: 35px;
+    height: 35px;
+    margin-right: 45px;
+  }
+  .label_discount {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  input[type="checkbox"]:checked::before {
+    top: -11px;
+    left:1px
+  }
+
+  .products_section {
+
+    padding: 30px 0 0 0; 
+  } 
+
+  .sorting {
+    gap:20px;
+  }
+
+  .sort_select { 
+    width: 120px;
+    height: 40px ;
+
+    padding: 10px;
+    font-size: 16px; 
+    font-weight: 500px;
+  }
+  
+  .form_title {
+    font-size: 16px;
+  } 
+  
+  .search_form input {
+    width: 80px;
+    height: 40px;
+    margin: -4px 6px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .sorting {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .products_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

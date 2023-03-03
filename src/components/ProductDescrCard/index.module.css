@@ -7,8 +7,8 @@
     display: flex;
     justify-content: space-between;
     gap:10px;
-    width: 1371px;
-    height: 770px;
+    max-width: 1371px;
+    min-height: 770px;
     margin: 0 auto;
 }
 
@@ -30,17 +30,18 @@
 
 .price_block {
     display: flex;
-    gap: 10px;/*нужно изменить*/
+    gap: 10px;
     align-items: center;
 }
 
-.discont_price {
+.discont_price,
+.full_price {
     font-size: 70px;
     font-weight: 600;
     margin-right: 101px;
 }
 
-.full_price {
+.price {
     font-size: 20px;
     font-weight: 500;
     text-decoration: line-through;
@@ -54,7 +55,7 @@
 }
 
 .description {
-    width: 412px;
+    max-width: 412px;
     height: 130px;
 }
 
@@ -81,4 +82,106 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1080px) {
+    .product_card_content {
+        min-height: 625px;
+    }
 
+    .product_descr_card img {
+        width: 410px;
+        height: 410px
+    }
+
+    .discont_price {
+        font-size: 50px;
+    }
+
+    .product_card_btn {
+        width: 300px;
+    }
+
+    .product_card_info {
+        margin-top: -10px;
+    }
+
+    .product_descr_card h2{
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+     .product_card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        } 
+        .product_card_content {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 30px;
+            min-height: 930px;
+        }
+        .product_descr_card img {
+            margin: 0 auto;
+            display: block;
+        }
+        .product_descr_card h2 {
+            padding-bottom: 10px;
+        }
+        .full_price {
+            margin-right: inherit;
+        }
+} 
+
+@media screen and (max-width: 480px) {
+    .product_descr_card img {
+        width: 310px;
+        height: 310px;
+    }
+
+    .product_card_content {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .product_descr_card h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .discont_price {
+        font-size: 30px;
+    }
+
+    .product_card_btn {
+        width: 220px;
+        height: 56px;
+        font-size: 25px;
+    }
+
+    .product_descr_card {
+        padding-top: 10px;
+    }
+    .product_card_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .product_descr_card img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .discont_price {
+        margin-right: 50px;
+    }
+    
+    .full_price {
+        margin-right: 16px;
+    }
+}

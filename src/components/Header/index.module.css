@@ -34,3 +34,19 @@
     height: 167px;
 }
 
+@media screen and (max-width: 480px) {
+    .container_logo_btn img {
+        width: 50px;
+        height: 50px;
+        margin-top: 29px;
+    }
+
+    .container_logo_btn button {
+        width: 99px;
+        height: 37px;
+    }
+    
+    .container_logo_btn {
+        width: 175px;
+    }
+}

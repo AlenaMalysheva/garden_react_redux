@@ -16,7 +16,7 @@ return (
 
     <div className={s.sale_product_card}>
       <div>
-        <img src={`http://127.0.0.1:3333${image}`} alt={title} className={s.product_img}/>
+        <img src={`https://garden-project-backend.onrender.com${image}`} alt={title} className={s.product_img}/>
         <button onClick={add_to_cart}>add to cart</button>
       </div>
       {

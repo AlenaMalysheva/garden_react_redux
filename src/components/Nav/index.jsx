@@ -2,7 +2,6 @@ import React , { useState } from 'react'
 import { GiShoppingCart } from "react-icons/gi"
 import s from './index.module.css'
 import { Link } from 'react-router-dom'
-// import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { HashLink } from 'react-router-hash-link'
 import { useSelector } from 'react-redux'
 import { RiMenuAddFill  } from 'react-icons/ri'
@@ -25,7 +24,10 @@ export default function Nav() {
   return (
     <nav className={ s.nav_menu_container}>
         <ul className={ menuOpen ? [s.nav_menu, s.active].join(' ') : [s.nav_menu]}>
-          <Link to='categories'>  
+          <Link 
+            to='categories'  
+            onClick= {() => setMenuOpen(false)}
+          >  
             <li>Categories</li>
           </Link>
           <HashLink 
@@ -49,17 +51,15 @@ export default function Nav() {
           {
             menuOpen && <Footer showAddressBlock={false} />
           }
-         
         </ul>
-        
-        
+
         <div className={s.nav_menu_icons}>
           <GrFavorite/>
           <Link to='cart'>
               <div className={s.cart_nav}>
                 <GiShoppingCart className={s.cart_icon}/>
                 {
-                  cart.length !== 0 ? <p>{cart_count}</p> : ''  
+                  cart.length !== 0 && <p>{cart_count}</p>  
                 }
               </div>
           </Link>

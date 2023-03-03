@@ -15,8 +15,8 @@ export default function CartItem({ id, image, title, price, discont_price,count 
   const remove_item = () => dispatch(removeItem(id));
 
   return (
-    <div className={s.cart_item}>
-    <img src={`http://127.0.0.1:3333${image}`} alt={title} className={s.cart_item_img}/>
+  <div className={s.cart_item}>
+    <img src={`https://garden-project-backend.onrender.com${image}`} alt={title} className={s.cart_item_img}/>
     <div className={s.title_btn}>
       <p>{title}</p>
       <div className={s.cart_btn_count}>

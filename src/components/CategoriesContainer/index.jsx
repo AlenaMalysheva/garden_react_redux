@@ -17,7 +17,6 @@ export default function CategoriesContainer({limit,showButton = true}) {
 
     const limitedArray = categories.slice(0, limit);
 
-    
     return (
         <section className={s.categories_block}>
             <div className='wrapper'>
@@ -30,12 +29,13 @@ export default function CategoriesContainer({limit,showButton = true}) {
                         </Link>
                         )
                     }
-                    
                 </div>
-                <div className={s.categories_container}>
-                    {
-                        limitedArray.map((category) => <CategoryCard key={category.id} {...category}/>)  
-                    }
+                <div className={s.scroll_container}>
+                    <div className={s.categories_container}>
+                        {
+                            limitedArray.map((category) => <CategoryCard key={category.id} {...category}/>)  
+                        }
+                    </div>
                 </div>
             </div>
         </section>

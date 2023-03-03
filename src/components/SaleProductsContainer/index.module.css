@@ -9,7 +9,15 @@
 }
 
 .sale_title {
-    padding: 49px;
+    padding-top: 49px;
+}
+
+@media screen and (max-width: 1040px) {
+    .products_container {
+        flex-wrap:wrap;
+        justify-content: center;
+        gap: 44px;
+    } 
 }
 
 @media screen and (max-width: 480px) {

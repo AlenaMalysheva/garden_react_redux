@@ -1,5 +1,5 @@
 .discount_section {
-   max-height: 476px;
+    max-height: 476px;
     display: flex;
     justify-content: space-between; 
     padding: 27px 200px 27px 91px;
@@ -51,10 +51,30 @@
     margin-left: 15px; 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
+    .discount_section img {
+        width: 300px;
+        height: 300px;
+        margin-top: 55px;
+    }
+    
+    .form_input,
+    .form_btn {
+        width: 415px;
+        height: 69px;
+    }
+} 
+
+@media screen and (max-width: 900px) {
     .discount_section img {
         display: none;
     }
+
+    .discount_section {
+        justify-content: center; 
+        align-items: center;
+        padding: 27px 100px 27px 91px;
+    } 
 
     .accent_discount {
         font-weight: 700;

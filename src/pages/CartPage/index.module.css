@@ -4,7 +4,7 @@
 }
 
 .cart_nav {
-    width: 824px;
+    max-width: 824px;
     display: flex;
     justify-content: space-between;
     margin: 16px 0 35px;
@@ -165,4 +165,113 @@
     border: 1px solid #339933;
     border-radius: 15px;
     padding: 20px 40px;
+}
+
+
+@media screen and (max-width: 1390px) {
+    .form_block {
+        width: 350px;
+        height: 485px;
+    }
+
+    .cart_form_input {
+        width: 295px;
+        height: 62px;
+    }
+    .cart_form_btn,
+    .clear_btn {
+        width: 297px;
+        height: 65px;
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 1230px) {
+    .cart_content {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .cart_content {
+        display: block;
+    }
+
+    .form_block {
+        margin: 35px auto 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .success_message {
+        max-width: 760px;
+        padding: 76px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .success_message {
+        max-width: 550px;
+        padding: 50px 0;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .success_message {
+        max-width: 470px;
+        padding: 30px 0;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .cart_content {
+        display: block;
+    }
+
+    .cart_nav {
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .form_block {
+        width: 300px;
+        height: 410px;
+    }
+
+    .cart_form_input,
+    .cart_form_btn,
+    .clear_btn {
+        width: 248px;
+        height: 45px;
+    }
+    
+    .cart_form_input{
+        padding: 20px;
+    }
+    .success_message {
+        width: 400px;
+        padding: 15px ;
+    }
+
+    .total_block {
+        margin-bottom: 30px;
+    }
+    .cart_icon {
+        font-size: 250px;
+    }
+    .cart_empty {
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .success_message {
+        max-width: 275px;
+        padding: 24px 0;
+    }
 }

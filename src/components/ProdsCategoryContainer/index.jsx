@@ -69,41 +69,42 @@ export default function ProdsCategoryContainer() {
         <div className='wrapper'>
             <h2>{category.title}</h2>
             <div className={s.sorting}>
-                <div>
-                    <span className={s.form_title}>Price</span>
-                    <form className={s.search_form} onSubmit={search_products}>
+                <form className={s.search_form} onSubmit={search_products}>
+                    <label className={s.form_title}>Price</label>
+                    <input 
+                        type="number" 
+                        placeholder='from' 
+                        name='min'  
+                        min='0' 
+                        value={minPrice} 
+                        onChange={(event) => setMinPrice(event.target.value)}
+                    />
+                    <input 
+                        type="number" 
+                        placeholder='to' 
+                        name='max'  
+                        min='0' 
+                        value={maxPrice} 
+                        onChange={(event) => setMaxPrice(event.target.value)}
+                    />
+                </form>
+                <div className={s.checkbox}>
+                    <label htmlFor="discountCheckbox" className={s.label_discount}>Discounted items</label>
                         <input 
-                            type="number" 
-                            placeholder='from' 
-                            name='min'  
-                            min='0' 
-                            value={minPrice} 
-                            onChange={(event) => setMinPrice(event.target.value)}
-                        />
-                        <input 
-                            type="number" 
-                            placeholder='to' 
-                            name='max'  
-                            min='0' 
-                            value={maxPrice} 
-                            onChange={(event) => setMaxPrice(event.target.value)}
-                        />
-                    </form>
+                            type="checkbox" 
+                            id="discountCheckbox" 
+                            checked={onSale} 
+                            onChange={() => setOnSale(!onSale)}
+                    />
                 </div>
-                <label htmlFor="discountCheckbox" className={s.label_discount}>Discounted items</label>
-                <input 
-                        type="checkbox" 
-                        id="discountCheckbox" 
-                        checked={onSale} 
-                        onChange={() => setOnSale(!onSale)}
-                />
-                <div>
+            
+                <div className={s.sorted_form}>
                     <span className={s.form_title}>Sorted </span>
-                        <select className={s.sort_select} onInput={sort_product}>
-                            <option value='default'>by default</option>
-                            <option value='title'>by title</option>
-                            <option value='price'> by price</option>
-                        </select>
+                    <select className={s.sort_select} onInput={sort_product}>
+                        <option value='default'>by default</option>
+                        <option value='title'>by title</option>
+                        <option value='price'> by price</option>
+                    </select>
                 </div>
             </div>
             <div className={s.products_container}>

@@ -5,7 +5,7 @@ import { loadCategoryById } from "../store/reducers/categoryReducer";
 
 export const getCategory = (id) => {
     return dispatch => {
-        fetch(`http://localhost:3333/categories/info/${id}`)
+        fetch(`https://garden-project-backend.onrender.com/categories/info/${id}`)
         .then( resp => resp.json())
         .then( json => dispatch(loadCategoryById(json)))
     }
