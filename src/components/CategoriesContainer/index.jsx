@@ -30,14 +30,12 @@ export default function CategoriesContainer({limit,showButton = true}) {
                         )
                     }
                 </div>
-                <div className={s.scroll_container}>
                     <div className={s.categories_container}>
                         {
                             limitedArray.map((category) => <CategoryCard key={category.id} {...category}/>)  
                         }
                     </div>
                 </div>
-            </div>
         </section>
   )
 }

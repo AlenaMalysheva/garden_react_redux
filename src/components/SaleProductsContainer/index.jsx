@@ -8,16 +8,12 @@ export default function SaleProductsContainer() {
 
   const dispatch = useDispatch();
 
-  const products = useSelector( state => state.allProducts);
+  const products = useSelector( state => state.saleProducts);
 
   useEffect(() => {dispatch(getAllProducts)}, []);
     
-  const discountProducts = products.filter(el => el.discont_price !== el); // товары со скидкой , сравниваем цену со скидкой и цену без скидки
+  const discountProducts = products.filter(products => products.discont_price !== products.price); // товары со скидкой , сравниваем цену со скидкой и цену без скидки
   
-  const getRandomElement = (max) => { 
-    return Math.floor(Math.random() * max ) // 0 - 2
- }
-
   let actionProducts = [];
   if (discountProducts.length >= 3) {    // если товаро со скидкой > 3
   actionProducts = discountProducts
@@ -28,7 +24,6 @@ export default function SaleProductsContainer() {
   } else {
     actionProducts = discountProducts
 }
-
 
 return ( 
     <section className={s.sale_block}>

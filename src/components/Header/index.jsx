@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
                     <Link to='/'>
                         <img src={logo} alt="logo" />
                     </Link>
-                    <Link to='products'>
+                    <Link to='categories'>
                         <button>Catalog</button>
                     </Link>
                 </div>

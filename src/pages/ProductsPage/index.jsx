@@ -1,11 +1,11 @@
 import React from 'react'
-import ProductsContainer from '../../components/ProductsContainer'
+import ProductsOnSale from '../../components/ProductsOnSale'
 
 export default function ProductsPage() {
 
   return (
     <div>
-      <ProductsContainer/>
+      <ProductsOnSale />
     </div>
   )
 }

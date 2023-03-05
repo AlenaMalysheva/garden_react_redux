@@ -9,7 +9,7 @@ export default function MainPage() {
   return (
     <div>
         <SaleBanner />
-        <CategoriesContainer limit={4} scrollable={true}/>
+        <CategoriesContainer limit={4} />
         <DiscountVaucher />
         <SaleProductsContainer />
     </div>
