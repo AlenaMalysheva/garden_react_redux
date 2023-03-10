@@ -103,5 +103,17 @@
     
 }
 
+@media screen and (max-width: 385px) { 
+    .details_btn{ 
+        margin-top: 30px;
+    }
+    .sale_info {
+        padding: 10px 0 31px 11px
+    } 
+}
+
+
+
+
 
 

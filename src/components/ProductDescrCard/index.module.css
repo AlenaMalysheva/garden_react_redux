@@ -1,5 +1,5 @@
 .product_descr_card {
-    background-color: #E5E5E5;
+    background-color: #ffff;
     padding-top: 61px;
 }
 
@@ -143,6 +143,7 @@
     .product_card_content {
         flex-direction: column;
         justify-content: flex-start;
+        min-height: 780px;
     }
 
     .product_descr_card h2 {
@@ -162,7 +163,9 @@
 
     .product_descr_card {
         padding-top: 10px;
+        max-height: 995px;
     }
+    
     .product_card_info {
         display: flex;
         flex-direction: column;

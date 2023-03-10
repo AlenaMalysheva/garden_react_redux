@@ -1,6 +1,6 @@
 .cart_page {
     min-height: 390px;
-    background-color: #E5E5E5;
+    background-color: #ffff;
 }
 
 .cart_nav {
@@ -69,7 +69,7 @@
 .form_block {
     border: 2px solid black;
     width: 496px;
-    height: 520px;
+    height: 490px;
     border-radius: 21px;
     padding: 25px;
 }
@@ -111,15 +111,13 @@
     background-color:white;
     width: 446px;
     height: 76px;
-    border-radius: 17px;
     border: none;
-    padding: 20px, 185px, 20px, 143px;
     font-weight: 700;
     font-size: 28px;
     color: #339933;
-    margin: 0 auto;
     margin-top: 25px;
     cursor: pointer;
+    text-decoration:underline;
 }
 
 .form_title {
@@ -167,8 +165,7 @@
     padding: 20px 40px;
 }
 
-
-@media screen and (max-width: 1390px) {
+@media screen and (max-width: 1440px) {
     .form_block {
         width: 350px;
         height: 485px;
@@ -184,16 +181,15 @@
         height: 65px;
         font-size: 25px;
     }
-    
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1300px) {
     .cart_content {
-        gap: 30px;
+        gap: 10px;
     }
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1200px) {
     .cart_content {
         display: block;
     }
@@ -217,15 +213,12 @@
     }
 }
 
-
 @media screen and (max-width: 650px) {
     .success_message {
         max-width: 470px;
         padding: 30px 0;
     }
 }
-
-
 
 @media screen and (max-width: 480px) {
     .cart_content {
@@ -267,7 +260,6 @@
         text-align: center;
     }
 }
-
 
 @media screen and (max-width: 420px) {
     .success_message {

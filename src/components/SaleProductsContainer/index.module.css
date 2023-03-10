@@ -1,11 +1,11 @@
 .sale_block {
-    background-color: #E5E5E5;
+    background-color: #ffff;
 }
 
 .products_container {
     display: flex;
     gap: 44px;
-    padding: 21px 0 150px;
+    padding: 45px 0 150px;
 }
 
 .sale_title {
@@ -18,6 +18,15 @@
         justify-content: center;
         gap: 44px;
     } 
+    .sale_title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .products_container { 
+        gap: 60px;
+    }
 }
 
 @media screen and (max-width: 480px) {

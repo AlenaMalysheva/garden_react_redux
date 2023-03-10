@@ -25,10 +25,12 @@ export default function CartItem({ id, image, title, price, discont_price,count 
         <button onClick={increment_item}><HiPlus /></button>
       </div>
     </div>
-
+ 
     <div className={s.price_block}>
       <p className={s.discont_price}>{discont_price}$</p>
-      <p className={s.full_price}>{price}$</p>
+      {
+        discont_price < price &&  <p className={s.full_price}>{price}$</p>
+      }
     </div>
     <BsTrash className={s.trash_icon} onClick={remove_item} />
 </div>

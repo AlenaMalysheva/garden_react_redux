@@ -1,6 +1,5 @@
 .cart_item {
     display: flex;
-    max-width: 824px;
     border-bottom: 1px solid #A7A7A7;
     max-height: 257px;
     padding: 40px 0;
@@ -13,11 +12,10 @@
     border-radius: 21px;
 }
 
-
 .price_block {
     display: flex;
     align-items: center;
-    gap: 40px
+    gap: 70px
 }
 
 .discont_price {
@@ -32,6 +30,7 @@
     font-weight: 500;
     color: #8B8B8B;
     text-decoration: line-through;
+    margin-right: 43px;
 }
 
 .title_btn {
@@ -43,7 +42,7 @@
 }
 
 .title_btn > p {
-    max-width: 295px;
+    width: 295px;
 }
 
 .cart_btn_count {
@@ -88,21 +87,9 @@
     .title_btn {
         margin: 0 2px 0 29px ;
     }
-    .price_block {
-        gap: 2px
-    }
 }
 
-@media screen and (max-width: 1090px) {
-    .cart_item {
-        max-width: 1050px;
-    }
-    .price_block {
-        gap: 2px
-    }
-}
-
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 780px) {
     .cart_item_img {
         width: 92px;
         height: 66px;
@@ -111,12 +98,12 @@
     }
     
     .title_btn {
-        margin: 0 -90px 0 29px ;
+        margin: -16px -90px 0 29px ;
         padding: 10px 0;
     }
 
     .discont_price {
-        width: 65px;
+        width: 85px;
         font-size: 25px;
         font-weight: 600;
     }
@@ -126,7 +113,43 @@
     }
     
     .cart_item {
-        max-width: 630px;
         height: 210px
+    }
+}
+
+@media screen and (max-width: 570px) {
+     .price_block {
+        gap: 5px;
+    }
+    .title_btn {
+        margin: -16px -90px 0 29px ;
+    }
+    .title_btn > p {
+        min-width: 222px;
+        width: 112px;
+        font-size: 15px;
+    }
+    .discont_price {
+        font-size: 20px;
+    }
+    .cart_btn_count {
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .title_btn > p{
+        min-width: 200px;
+        font-size: 13px;
+    }
+    .cart_item_img {
+        width: 75px;
+        height: 58px;
+    }
+    .title_btn{
+        margin: -16px -90px 0 10px;
+    }
+    .full_price {
+        display: none;
     }
 }

@@ -34,7 +34,7 @@ export default function Nav() {
             smooth to = '/#coupon'
             onClick= {() => setMenuOpen(false)}
           >
-            <li>Coupon</li>
+            <li>Sale</li>
           </HashLink>
           <HashLink 
             smooth to = '/#discount'

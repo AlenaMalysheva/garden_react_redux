@@ -21,7 +21,7 @@ export default function CartPage() {
     dispatch(clearCart())
   }
 
-  const total = cart.reduce((total,el) => total + el.discont_price * el.count, 0)
+  const total = cart.reduce((total,el) => total + el.discont_price * el.count, 0).toFixed(2)
 
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ export default function CartPage() {
 
   return (
   
-    <section className={s.cart_page}>
+    <section className={[s.cart_page, 'wrapper'].join(' ')}>
       {
         submitted 
           ? <div className={s.success_message}>
